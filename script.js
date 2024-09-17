@@ -1,4 +1,3 @@
-// script.js
 document.getElementById('chatbot-send').addEventListener('click', function() {
     let input = document.getElementById('chatbot-input').value;
     let messages = document.getElementById('chatbot-messages');
@@ -47,6 +46,26 @@ document.getElementById('chatbot-send').addEventListener('click', function() {
             botMessage.textContent = 'Regularly back up your data to protect against data loss due to malware, hardware failure, or other issues.';
         } else if (input.toLowerCase().includes('public wifi')) {
             botMessage.textContent = 'Be cautious when using public Wi-Fi networks, as they can be insecure and expose your data to potential attackers.';
+        } else if (input.toLowerCase().includes('botnet')) {
+            botMessage.textContent = 'A botnet is a collection of internet-connected devices infected by malware that allow attackers to control them as a group.';
+        } else if (input.toLowerCase().includes('ddos')) {
+            botMessage.textContent = 'A DDoS (Distributed Denial-of-Service) attack overwhelms a network or service with traffic to disrupt its normal operations.';
+        } else if (input.toLowerCase().includes('password manager')) {
+            botMessage.textContent = 'A password manager helps you generate and store strong, unique passwords for all your accounts in one secure place.';
+        } else if (input.toLowerCase().includes('dark web')) {
+            botMessage.textContent = 'The Dark Web is a part of the internet that is not indexed by traditional search engines and often used for illicit activities.';
+        } else if (input.toLowerCase().includes('zero-day')) {
+            botMessage.textContent = 'A zero-day vulnerability refers to a flaw in software that is unknown to the vendor and can be exploited by hackers before a fix is available.';
+        } else if (input.toLowerCase().includes('patch')) {
+            botMessage.textContent = 'A patch is a piece of software designed to update a computer program or its supporting data to fix or improve it, including fixing security vulnerabilities.';
+        } else if (input.toLowerCase().includes('identity theft')) {
+            botMessage.textContent = 'Identity theft occurs when someone steals your personal information to commit fraud, such as making purchases or opening accounts in your name.';
+        } else if (input.toLowerCase().includes('whaling')) {
+            botMessage.textContent = 'Whaling is a specific kind of phishing attack that targets high-profile individuals, such as executives, in an organization.';
+        } else if (input.toLowerCase().includes('brute force')) {
+            botMessage.textContent = 'A brute-force attack is a trial-and-error method used to decode encrypted data, such as passwords, by trying all possible combinations.';
+        } else if (input.toLowerCase().includes('security awareness training')) {
+            botMessage.textContent = 'Security awareness training educates employees and individuals on best practices to protect themselves and their organization from cyber threats.';
         } else {
             botMessage.textContent = 'Sorry, I don\'t understand that question. Please ask something else.';
         }
