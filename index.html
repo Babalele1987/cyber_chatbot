@@ -1,42 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber Security Awareness Campaign with Chatbot</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
-        <h1>Cyber Security Awareness Campaign with Chatbot</h1>
+    <header class="bg-dark text-white py-3 text-center shadow-sm">
+        <h1 class="display-5">Cyber Security Awareness Campaign</h1>
     </header>
-    <main>
-        <section id="about-cyber-security">
-            <h2>About Cyber Security</h2>
-            <p>Cyber security involves protecting computer systems, networks, and data from digital attacks. It includes practices and technologies to safeguard information integrity, confidentiality, and availability.</p>
+
+    <main class="container my-5">
+        <section id="about-cyber-security" class="mb-5">
+            <h2 class="text-primary text-center mb-4">About Cyber Security</h2>
+            <p class="lead text-center">Cyber security involves protecting computer systems, networks, and data from digital attacks. It includes practices and technologies to safeguard information integrity, confidentiality, and availability.</p>
         </section>
-        <section id="faq">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h3>What is a cyber attack?</h3>
-                <p>A cyber attack is any attempt to expose, alter, disable, destroy, steal, or gain unauthorized access to or make unauthorized use of an asset.</p>
+
+        <section id="faq" class="mb-5">
+            <h2 class="text-primary text-center mb-4">Frequently Asked Questions</h2>
+
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is a cyber attack?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            A cyber attack is any attempt to expose, alter, disable, destroy, steal, or gain unauthorized access to or make unauthorized use of an asset.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How can I protect my passwords?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Use strong passwords that include a mix of letters, numbers, and symbols. Avoid using easily guessable information and consider using a password manager.
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more FAQs as needed -->
             </div>
-            <div class="faq-item">
-                <h3>How can I protect my passwords?</h3>
-                <p>Use strong passwords that include a mix of letters, numbers, and symbols. Avoid using easily guessable information and consider using a password manager.</p>
-            </div>
-            <!-- Add more FAQs as needed -->
         </section>
     </main>
-    <div id="chatbot">
-        <div id="chatbot-header">Cyber Security Chatbot</div>
-        <div id="chatbot-body">
-            <div id="chatbot-messages"></div>
-            <input type="text" id="chatbot-input" placeholder="Ask a question...">
-            
-            <button id="chatbot-send">Send</button>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot" class="card chatbot-widget shadow-lg position-fixed bottom-0 end-0 m-4">
+        <div id="chatbot-header" class="card-header bg-primary text-white text-center">
+            Cyber Security Chatbot
+        </div>
+        <div id="chatbot-body" class="card-body">
+            <div id="chatbot-messages" class="mb-3"></div>
+            <div class="input-group">
+                <input type="text" id="chatbot-input" class="form-control" placeholder="Ask a question...">
+                <button id="chatbot-send" class="btn btn-primary">Send</button>
+            </div>
         </div>
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
+
 </html>
