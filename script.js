@@ -15,7 +15,24 @@ document.getElementById('chatbot-send').addEventListener('click', function() {
 
         // Simple bot responses
         if (input.toLowerCase().includes('password')) {
-            botMessage.textContent = 'Use strong passwords that include a mix of letters, numbers, and symbols.';
+            botMessage.textContent = 'Use strong passwords that include a mix of letters, numbers, and symbols.
+                Securing your password is crucial for protecting your accounts. Here are some essential tips to ensure your passwords are strong and secure:
+
+1. **Use a Strong Password**: Combine uppercase and lowercase letters, numbers, and symbols. Avoid common words or easily guessable information like your name or birthday.
+
+2. **Avoid Reusing Passwords**: Each account should have a unique password. This way, if one account is compromised, others remain safe.
+
+3. **Enable Two-Factor Authentication (2FA)**: Most services offer 2FA, adding an extra security layer by requiring a secondary verification step (e.g., a code sent to your phone).
+
+4. **Use a Password Manager**: Password managers like LastPass, Dashlane, or Bitwarden can securely store and generate complex passwords, making it easier to use unique passwords for every account.
+
+5. **Beware of Phishing Scams**: Don’t click on suspicious links or enter your password on unfamiliar websites. Phishing attacks often try to trick you into revealing your password.
+
+6. **Update Passwords Regularly**: Periodically changing your passwords reduces the risk of long-term exposure if your password is compromised.
+
+7. **Avoid Storing Passwords in Plain Text**: Do not store passwords in unencrypted files or on paper. Use secure apps or password managers to store them safely.
+
+Would you like more information on any specific password security tool or practice?';
         } else if (input.toLowerCase().includes('phishing')) {
             botMessage.textContent = 'Phishing is a type of cyber attack that uses disguised emails to trick you into revealing personal information.';
         } else if (input.toLowerCase().includes('malware')) {
